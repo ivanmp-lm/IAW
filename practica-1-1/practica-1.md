@@ -40,7 +40,7 @@ $ sudo apt install mysql-server
 $ sudo apt install php libapache2-mod-php php-mysql
 ```
 
-Una vez terminemos, la pila ya estará completa pero **MySQL requiere de configuración adicional.** 
+Una vez terminemos, la pila ya estará completa pero **MySQL requiere de configuración adicional.**
 
 Debemos acceder como **root** a la consola MySQL con los siguientes comandos:
 
@@ -187,11 +187,9 @@ Require valid-user
 
 ## 5. Script de automatización
 
-Si tenemos que instalar esta pila en más de un dispositivo, este script nos ayudará a hacerlo de forma automática, ahorrándonos mucho tiempo. 
+Si tenemos que instalar esta pila en más de un dispositivo, este script nos ayudará a hacerlo de forma automática, ahorrándonos mucho tiempo.
 
-El script puede ser encontrado en el siguiente archivo: 
+El script puede ser encontrado en el siguiente archivo:
 
 * [Práctica 1 - Script de automatización LAMP](script-de-automatizacion-lamp.md)
-
-
 
