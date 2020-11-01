@@ -1,5 +1,5 @@
 ---
-description: >-
+Descripción: >-
   En esta práctica se emplearán los conocimientos de la práctica 1 para
   trasladar nuestra pila a un servidor en la nube de Amazon.
 ---
