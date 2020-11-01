@@ -82,3 +82,108 @@ Para acceder escribimos nuestra dirección IP en el navegador seguido de "/info.
 
 > 192.168.1.100/info.php
 
+Si todo funciona correctamente, veremos una página con diversa información.
+
+## 3. Otras aplicaciones
+
+La pila LAMP tiene otra serie de software que normalmente va relacionado con la misma sin ser esencial, en este apartado se instalarán algunas de estas aplicaciones.
+
+* **Aplicación propuesta**
+
+Esta aplicación, del repositorio siguiente: [`https://github.com/josejuansanchez/iaw-practica-lamp`](https://github.com/josejuansanchez/iaw-practica-lamp)Será utilizada para realizar las prácticas con LAMP. Simplemente lo importamos con git hacia la siguiente carpeta:
+
+```php
+$ cd /var/www/html/
+$ git clone https://github.com/josejuansanchez/iaw-practica-lamp
+$ mv /var/www/html/iaw-practica-lamp/src/* /var/www/html/
+```
+
+* **phpMyAdmin**
+
+Instalamos desde el repositorio:
+
+```php
+$ sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
+```
+
+Eventualmente aparecerá una ventana donde se nos pedirá que tipo de servidor web utilizaremos, seleccionamos la opción **apache2.**
+
+Después nos preguntará si deseamos utilizar `dbconfig-common` para la base de datos y aceptamos. Por último especificaremos la contraseña para acceder a phpMyAdmin.
+
+Para conectarnos escribimos en el navegador nuestra ip seguido de "/phpmyadmin". Ejemplo:
+
+> 192.168.1.100/phpmyadmin
+
+* **Adminer**
+
+Esta aplicación es una **alternativa a phpMyAdmin** por lo que podemos usar cualquiera de las dos.
+
+Descargamos el siguiente archivo: [https://github.com/vrana/adminer/releases/download/v4.3.1/adminer-4.3.1-mysql.php](https://github.com/vrana/adminer/releases/download/v4.3.1/adminer-4.3.1-mysql.php)
+
+Después sólo tendremos que moverlo a `/var/www/html`
+
+* **GoAccess**
+
+Esta aplicación nos permitirá gestionar los archivos del log de Apache. Necesitaremos añadir su repositorio manualmente para realizar la instalación, seguimos los comandos:
+
+```php
+$ echo "deb http://deb.goaccess.io/ $(lsb_release -cs) main" | sudo tee -a /etc/apt/sources.list.d/goaccess.list
+$ wget -O - https://deb.goaccess.io/gnugpg.key | sudo apt-key add -
+$ sudo apt-get update
+$ sudo apt-get install goaccess
+```
+
+Para utilizar GoAccess vamos a seguir los siguientes pasos. Primero implementaremos seguridad para que solo nosotros podamos ver lo que GoAccess genera a partir de los logs, para ello creamos un directorio en la ruta `/var/www/html`
+
+```php
+$ mkdir /var/www/stats
+```
+
+Iniciamos el proceso en segundo plano, pero hay que tener en cuenta que si lo hacemos desde un terminal SSH y lo cerramos, **el proceso finalizará.** Para evitar esto, añadiremos el comando `nohup` al inicio:
+
+```php
+$ nohup goaccess /var/log/apache2/access.log -o /var/www/html/stats/index.html --log-format=COMBINED --real-time-html &
+```
+
+Creamos el archivo de contraseñas. Es necesario guardar este archivo en una ruta donde no se pueda tener acceso desde el exterior:
+
+```php
+$ sudo htpasswd -c /home/usuario/.htpasswd usuario
+```
+
+Por último, editaremos el archivo de configuración de Apache al que añadiremos una pequeña sección entre las líneas &lt;VirtualHost \*:80&gt; y &lt;/VirtualHost&gt;
+
+```php
+$ sudo nano /etc/apache2/sites-enabled/000-default.conf
+```
+
+```text
+<Directory "/var/www/html/stats">
+  AuthType Basic
+  AuthName "Acceso restringido"
+  AuthBasicProvider file
+  AuthUserFile "/home/usuario/.htpasswd"
+  Require valid-user
+</Directory>
+```
+
+## 4. Control de acceso con `.htaccess`
+
+Creamos el archivo `.htaccess` en el directorio `stats` que hicimos en el paso anterior para la instalación de GoAccess:
+
+```bash
+$ sudo nano /var/www/html/stats/.htaccess
+```
+
+Contendrá lo siguiente:
+
+```bash
+AuthType Basic
+AuthName "Acceso restringido"
+AuthBasicProvider file
+AuthUserFile "/home/usuario/.htpasswd"
+Require valid-user
+```
+
+## 5. Script de automatización
+
