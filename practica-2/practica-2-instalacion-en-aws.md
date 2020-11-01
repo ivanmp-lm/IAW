@@ -94,9 +94,9 @@ Host IAW-Practica-01
 * **User:** Nombre del usuario especificado en los detalles de nuestra instancia.
 * **IdentityFile:** Ruta de la llave pem.
 
-Después sólo tenemos que guardar el archivo y volver a pulsar la combinación de teclas mencionada anteriormente, esta vez ejecutaremos la opción "**Connect to Host...**" y se abrirá una ventana nueva en la que podremos trabajar. Allí simplemente podremos pegar el script creado en la práctica 1
+Después sólo tenemos que guardar el archivo y volver a pulsar la combinación de teclas mencionada anteriormente, esta vez ejecutaremos la opción "**Connect to Host...**" y se abrirá una ventana nueva en la que podremos trabajar. Allí simplemente podremos pegar el script creado en la práctica 1:
 
-ENLACE A SCRIPT
+[ENLACE A SCRIPT](https://github.com/ivanmp-lm/IAW/blob/master/practica-1/script-de-automatizacion-lamp.md)
 
 Y ejecutarlo por ssh o en la propia consola de Visual Studio Code.
 
