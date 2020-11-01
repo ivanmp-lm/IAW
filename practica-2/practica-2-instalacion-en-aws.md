@@ -6,7 +6,7 @@ Descripción: >-
 
 # Práctica 2 - Instalación en AWS
 
-## 1. Instalación de la AMI 
+## 1. Instalación de la AMI
 
 Una **AMI** \(Amazon Machine Image\) es una imagen que nos permite lanzar una máquina virtual en **AWS** \(Amazon Web Services\).
 
@@ -58,8 +58,6 @@ Localizamos la llave y entramos en sus propiedades y después en la pestaña de 
 
 Introducimos nuestro usuario actual, aplicamos y aceptamos.
 
-
-
 Podemos lanzar la instancia desde el panel de AWS seleccionándola y pulsando en el desplegable "**Estado de la instancia**", donde pulsaremos esta vez en "**Iniciar**".
 
 Pulsamos en la ID de la instancia y en el botón "**Conectar**"
@@ -76,7 +74,7 @@ $ ssh -i "Key-IMP.pem" ubuntu@ec2-100-25-198-14.compute-1.amazonaws.com
 
 > Figura 5. Conexión SSH a la máquina de AWS \(powershell\).
 
-## Conexión a través de Visual Studio Code
+## 3. Conexión a través de Visual Studio Code
 
 Para lanzar el script que necesitaremos es mucho más cómodo utilizar un entorno de programación como Visual Studio Code que nos permita pegarlo y/o escribirlo de forma sencilla.
 
@@ -111,6 +109,4 @@ Con el script ejecutado, probamos a acceder a la aplicación de LAMP que importa
 > Figura 7. Aplicación web funcionando desde el navegador.
 
 Una vez terminemos de trabajar con la máquina, hay que recordar que debemos detener la instancia, también hay que tener en cuenta que cada vez que la lancemos la IP cambiará, por lo que deberemos modificar el archivo de configuración de Remote SSH.
-
-
 
