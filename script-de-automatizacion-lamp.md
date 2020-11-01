@@ -4,7 +4,7 @@ description: >-
   LAMP desde cero.
 ---
 
-# Script de automatización LAMP
+# Práctica 1 - Script de automatización LAMP
 
 ```text
 #!/bin/bash
