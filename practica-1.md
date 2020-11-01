@@ -187,3 +187,11 @@ Require valid-user
 
 ## 5. Script de automatización
 
+Si tenemos que instalar esta pila en más de un dispositivo, este script nos ayudará a hacerlo de forma automática, ahorrándonos mucho tiempo. 
+
+El script puede ser encontrado en el siguiente archivo: 
+
+{% page-ref page="script-de-automatizacion-lamp.md" %}
+
+
+
