@@ -1,5 +1,5 @@
 ---
-description: >-
+Descripción: >-
   Este script escrito en bash instalará todo lo necesario para crear una pila
   LAMP desde cero.
 ---
