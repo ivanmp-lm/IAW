@@ -1,4 +1,5 @@
 # Table of contents
 
-* [Práctica 1 - Pila LAMP](Practica-1.md)
+* [Introduction](README.md)
+* [Práctica 1 - Pila LAMP](practica-1.md)
 
