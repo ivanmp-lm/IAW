@@ -191,7 +191,7 @@ Si tenemos que instalar esta pila en más de un dispositivo, este script nos ayu
 
 El script puede ser encontrado en el siguiente archivo: 
 
-{% page-ref page="script-de-automatizacion-lamp.md" %}
+* [Práctica 1 - Script de automatización LAMP](script-de-automatizacion-lamp.md)
 
 
 
