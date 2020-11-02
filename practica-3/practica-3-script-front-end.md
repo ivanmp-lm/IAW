@@ -63,7 +63,7 @@ nohup goaccess /var/log/apache2/access.log -o /var/www/html/stats/index.html --l
 htpasswd -b -c $HTPASSWD_DIR/.htpasswd $HTPASSWD_USER $HTPASSWD_PASSWD
 
 #Crear archivo 000-default.conf
-cp /home/ubuntu/000-default.conf /etc/apache2/sites-enabled/
+cp /home/ubuntu/000-default.conf /etc/apache2/sites-available/
 systemctl restart apache2
 ```
 
