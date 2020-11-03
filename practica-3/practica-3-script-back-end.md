@@ -11,6 +11,9 @@ DB_ROOT_PASSWD=root
 #Instalación MySQL
 #-----------------
 
+#Actualizar repositorios
+apt update
+
 #Instalar MySQL
 apt install mysql-server -y
 

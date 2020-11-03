@@ -6,3 +6,11 @@ description: >-
 
 # Práctica 3 - LAMP en dos niveles
 
+## 1. Creación y aprovisionamiento de las máquinas virtuales
+
+Para empezar con la práctica, lanzaremos dos AMIs Ubuntu Server 20.04 en Amazon Web Services con las características básicas \(la tarifa gratuita para usuarios de AWS educate\).
+
+Una de ellas actuará como el front-end, contendrá la mayor parte de la pila LAMP instalada \(Apache y PHP\) mientras que la otra será el back-end contando solamente con MySQL.
+
+Como en la práctica anterior, se aprovechará un script para tener las máquinas preparadas lo antes posible, cada máquina tendrá su script.
+
