@@ -14,6 +14,9 @@ DB_ROOT_PASSWD=root
 #Actualizar repositorios
 apt update
 
+#Instalar phpMyAdmin
+apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
+
 #Instalar MySQL
 apt install mysql-server -y
 
