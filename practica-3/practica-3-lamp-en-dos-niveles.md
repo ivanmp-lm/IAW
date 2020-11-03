@@ -8,7 +8,7 @@ description: >-
 
 ## 1. Creación y aprovisionamiento de las máquinas virtuales
 
-Para empezar con la práctica, lanzaremos dos AMIs Ubuntu Server 20.04 en Amazon Web Services con las características básicas \(la tarifa gratuita para usuarios de AWS educate\).
+Para empezar con la práctica, lanzaremos dos AMIs Ubuntu Server 20.04 en Amazon Web Services con las características básicas \(la tarifa gratuita para usuarios de AWS educate\). Debemos asegurarnos de que las máquinas tienen los puertos correspondientes abiertos, en el caso del backend necesitaremos el **puerto 3306** activado.
 
 Una de ellas actuará como el **front-end**, que contendrá la mayor parte de la pila LAMP instalada \(Apache y PHP\) mientras que la otra será el **back-end** __contando solamente con MySQL.
 
