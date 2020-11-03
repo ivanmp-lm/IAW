@@ -10,12 +10,16 @@ description: >-
 
 Para empezar con la práctica, lanzaremos dos AMIs Ubuntu Server 20.04 en Amazon Web Services con las características básicas \(la tarifa gratuita para usuarios de AWS educate\).
 
-Una de ellas actuará como el front-end, contendrá la mayor parte de la pila LAMP instalada \(Apache y PHP\) mientras que la otra será el back-end contando solamente con MySQL.
+Una de ellas actuará como el **front-end**, que contendrá la mayor parte de la pila LAMP instalada \(Apache y PHP\) mientras que la otra será el **back-end** __contando solamente con MySQL.
 
-Como en la práctica anterior, se aprovechará un script para tener las máquinas preparadas lo antes posible, cada máquina tendrá su script.
+Como en la práctica anterior, se aprovechará un script para tener las máquinas preparadas lo antes posible, cada máquina tendrá su propio script.
 
 * [Práctica 3 - Script Front-End](practica-3-script-front-end.md)
 * [Práctica 3 - Script Back-End](practica-3-script-back-end.md)
+
+Nos conectamos a través de Visual Studio Code y ejecutamos el script en cada una.
+
+## 2. Configuración de MySQL Server en la máquina back-end
 
 
 
