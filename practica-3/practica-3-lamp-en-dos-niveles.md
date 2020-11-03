@@ -14,3 +14,9 @@ Una de ellas actuará como el front-end, contendrá la mayor parte de la pila LA
 
 Como en la práctica anterior, se aprovechará un script para tener las máquinas preparadas lo antes posible, cada máquina tendrá su script.
 
+{% page-ref page="practica-3-script-front-end.md" %}
+
+{% page-ref page="practica-3-script-back-end.md" %}
+
+
+
