@@ -64,6 +64,8 @@ Pulsamos en la ID de la instancia y en el botón "**Conectar**"
 
 ![](../.gitbook/assets/image%20%284%29.png)
 
+> Figura 5. Resumen de la instancia e información útil para la conexión.
+
 En la pestaña "**Cliente SSH**" anotamos el último comando y si lanzamos un terminal desde donde está localizada la clave \(o especificando la **ruta absoluta** de la misma\) nos conectaremos. Ejemplo del comando necesario:
 
 ```text
@@ -72,7 +74,7 @@ $ ssh -i "Key-IMP.pem" ubuntu@ec2-100-25-198-14.compute-1.amazonaws.com
 
 ![](../.gitbook/assets/image%20%285%29.png)
 
-> Figura 5. Conexión SSH a la máquina de AWS \(powershell\).
+> Figura 6. Conexión SSH a la máquina de AWS \(powershell\).
 
 ## 3. Conexión a través de Visual Studio Code
 
@@ -100,13 +102,13 @@ Y ejecutarlo por ssh o en la propia consola de Visual Studio Code.
 
 ![](../.gitbook/assets/image%20%286%29.png)
 
-> Figura 6. Conexión a través de Remote SSH desde Visual Studio Code.
+> Figura 7. Conexión a través de Remote SSH desde Visual Studio Code.
 
 Con el script ejecutado, probamos a acceder a la aplicación de LAMP que importamos en el script.
 
 ![](../.gitbook/assets/image%20%287%29.png)
 
-> Figura 7. Aplicación web funcionando desde el navegador.
+> Figura 8. Aplicación web funcionando desde el navegador.
 
 Una vez terminemos de trabajar con la máquina, hay que recordar que debemos detener la instancia, también hay que tener en cuenta que cada vez que la lancemos la IP cambiará, por lo que deberemos modificar el archivo de configuración de Remote SSH.
 
