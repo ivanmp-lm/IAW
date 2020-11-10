@@ -34,7 +34,10 @@ apt install apache2 -y
 #-----------------
 
 #Instalar php
-apt install php libapache2-mod-php php-mysql -y 
+apt install php libapache2-mod-php php-mysql -y
+
+#Instalar phpMyAdmin
+apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
 
 #Clonar repositorio de la aplicación propuesta
 cd /var/www/html/
