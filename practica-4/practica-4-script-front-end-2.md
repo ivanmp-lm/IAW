@@ -40,7 +40,13 @@ apt install php libapache2-mod-php php-mysql -y
 rm -rf phpMyAdmin-latest-all-languages.tar.gz
 wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz
 tar -xzvf phpMyAdmin-latest-all-languages.tar.gz
-#--FALTA COMPLETAR--#
+rm -rf phpMyAdmin-latest-all-languages.tar.gz
+mv phpMyAdmin*/ /var/www/html/phpmyadmin
+mv /var/www/html/phpmyadmin/config.sample.inc.php config.inc.php
+#NECESARIO EDITAR LA LINEA SERVERS HOST CON LA IP DEL BACK-END!!
+apt install php-mbstring php-zip php-gd php-json php-curl -y
+phpenmod mbstring
+systemctl restart apache2
 
 #Clonar repositorio de la aplicación propuesta
 cd /var/www/html/
