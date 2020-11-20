@@ -1,6 +1,11 @@
 # Práctica 5 - Script balanceador
 
 ```text
+#!/bin/bash
+
+#Mostrar en pantalla los comandos que se van ejecutando
+set -x
+
 #Actualizar repositorios
 apt update
 
