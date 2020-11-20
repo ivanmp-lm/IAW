@@ -2,6 +2,11 @@
 
 * [IAW](README.md)
 
+## Práctica 5
+
+* [Práctica 5 - Balanceador de carga](practica-5/practica-5-balanceador-de-carga.md)
+* [Práctica 5 - Script balanceador](practica-5/practica-5-script-balanceador.md)
+
 ## Práctica 4
 
 * [Práctica 4 - Segundo front-end](practica-4/practica-4-segundo-front-end.md)
