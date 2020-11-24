@@ -4,7 +4,7 @@ description: En esta práctica se instalará una pila LEMP (Nginx)
 
 # Práctica 6 - Pila LEMP
 
-**Los recursos necesarios para esta práctica están en el siguiente repositorio**
+**Los recursos necesarios para esta práctica están en el siguiente** [**repositorio**](https://github.com/ivanmp-lm/IAW-Practica-6)\*\*\*\*
 
 Esta pila funciona exactamente igual que la LAMP pero a diferencia de ella, se utilizará Nginx como servidor web, sustituyendo a Apache.
 
