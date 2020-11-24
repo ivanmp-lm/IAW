@@ -2,6 +2,11 @@
 
 * [IAW](README.md)
 
+## Práctica-6
+
+* [Práctica 6 - Pila LEMP](practica-6/practica-6-pila-lemp.md)
+* [Práctica 6 - Script](practica-6/practica-6-script.md)
+
 ## Práctica 5
 
 * [Práctica 5 - Balanceador de carga](practica-5/practica-5-balanceador-de-carga.md)
