@@ -2,6 +2,13 @@
 
 * [IAW](README.md)
 
+## Práctica 7
+
+* [Práctica 7 - Balanceador con NGINX](practica-7/practica-7-balanceador-con-nginx.md)
+* [Practica 7 - Script Front](practica-7/practica-7-script-front.md)
+* [Practica 7 - Script Back](practica-7/practica-7-script-back.md)
+* [Práctica 7 - Script Balanceador](practica-7/practica-7-script-balanceador.md)
+
 ## Práctica-6
 
 * [Práctica 6 - Pila LEMP](practica-6/practica-6-pila-lemp.md)

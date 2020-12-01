@@ -51,7 +51,7 @@ Creamos el siguiente usuario y le damos permisos de acceso:
 
 ```text
 mysql> CREATE USER 'ubuntu'@'%' IDENTIFIED BY 'root';
-mysql> GRANT ALL PRIVILEGES ON '*.*' TO 'ubuntu'@'%';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'ubuntu'@'%';
 mysql> FLUSH PRIVILEGES;
 ```
 
