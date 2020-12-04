@@ -2,6 +2,10 @@
 
 * [IAW](README.md)
 
+## Práctica 8
+
+* [Práctica 8 - Instalación de Wordpress en pila LAMP](practica-8/practica-8-instalacion-de-wordpress-en-pila-lamp.md)
+
 ## Práctica 7
 
 * [Práctica 7 - Balanceador con NGINX](practica-7/practica-7-balanceador-con-nginx.md)
