@@ -37,6 +37,7 @@
 ## Práctica 2
 
 * [Práctica 2 - Instalación en AWS](practica-2/practica-2-instalacion-en-aws.md)
+* [Práctica 2 - Script](practica-2/practica-2-script.md)
 
 ## Práctica 1
 
