@@ -20,8 +20,8 @@ Una de ellas actuará como el **front-end**, que contendrá la mayor parte de la
 
 Como en la práctica anterior, se aprovechará un script para tener las máquinas preparadas lo antes posible, cada máquina tendrá su propio script.
 
-* [Práctica 3 - Script Front-End](practica-3-script-front-end.md)
-* [Práctica 3 - Script Back-End](practica-3-script-back-end.md)
+* [Práctica 3 - Script Front-End]()
+* [Práctica 3 - Script Back-End]()
 
 Nos conectamos a través de Visual Studio Code y ejecutamos el script en cada una.
 
