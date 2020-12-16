@@ -32,7 +32,7 @@ En él se localizará la línea **index** y se pondrá en primer lugar **index.p
 
 `index index.php index.html index.htm index.nginx-debian.html;`
 
-Se añadirá el bloque siguiente para indicar la localización del socket, indicando que el servidor fast-cgi está localizado en la misma máquina \(localhost\):
+Se añadirá el bloque siguiente para añadir la localización del socket, indicando que el servidor fast-cgi está localizado en la misma máquina \(localhost\):
 
 ```text
   location ~ \.php$ {
