@@ -2,6 +2,10 @@
 
 * [IAW](README.md)
 
+## PRÁCTICA 10
+
+* [Práctica 10 - Personalización de Wordpress](practica-10/practica-10.md)
+
 ## Práctica 8
 
 * [Práctica 8 - Instalación de Wordpress en pila LAMP](practica-8/practica-8-instalacion-de-wordpress-en-pila-lamp.md)
