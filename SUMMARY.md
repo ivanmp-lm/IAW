@@ -2,6 +2,10 @@
 
 * [IAW](README.md)
 
+## PRÁCTICA 11
+
+* [Práctica 11 - WPScan](practica-11/practica-11.md)
+
 ## PRÁCTICA 10
 
 * [Práctica 10 - Personalización de Wordpress](practica-10/practica-10.md)
