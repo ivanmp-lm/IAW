@@ -2,6 +2,10 @@
 
 * [IAW](README.md)
 
+## Práctica 12
+
+* [Práctica 12 - Wordpress con Bitnami](practica-12/practica-12-wordpress-con-bitnami.md)
+
 ## PRÁCTICA 11
 
 * [Práctica 11 - WPScan](practica-11/practica-11.md)
