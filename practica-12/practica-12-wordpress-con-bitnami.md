@@ -26,3 +26,17 @@ Estas credenciales serán únicas para cada AMI y se generarán junto con su cre
 
 ![](../.gitbook/assets/image%20%2816%29.png)
 
+Como último paso y para tener control total sobre nuestra AMI, necesitaremos tener acceso a phpMyAdmin, para lo cual será necesario crear un túnel SSH.
+
+Para crear este túnel se lanzará el siguiente comando en Powershell o en Bash:
+
+```text
+ssh -N -L 8888:127.0.0.1:80 -i CLAVE.PEM bitnami@IPSERVIDOR
+```
+
+Se sustituirá "IPSERVIDOR" Y "CLAVE.PEM" por la IP pública de la AMI y la localización de nuestra clave de acceso SSH respectivamente. El resultado de este comando será que nuestra dirección localhost \(127.0.0.1\) será enlazada con el puerto 80 del servidor y redireccionada a nuestro puerto 8888.
+
+![](../.gitbook/assets/image%20%2818%29.png)
+
+Como puede verse en la captura, se accederá al panel utilizando nuestra dirección localhost seguido del puerto 8888. Las credenciales serán "root" y la clave anteriormente adquirida en la consola del registro del sistema de la AMI.
+

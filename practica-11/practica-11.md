@@ -17,7 +17,7 @@ $ docker run -it --rm wpscanteam/wpscan --url http://DIRECCION-IP  --enumerate p
 
 Donde "DIRECCION-IP" será la IP pública del servidor donde esté alojada la página a escanear.
 
-![](../.gitbook/assets/image%20%2818%29.png)
+![](../.gitbook/assets/image%20%2819%29.png)
 
 No obstante, se necesita una clave API para poder escanear las vulnerabilidades del sistema, para ello habrá que registrarse en WPScan para que se nos proporcione la misma, que tiene 50 usos gratuitos al día.
 
