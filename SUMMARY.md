@@ -2,6 +2,10 @@
 
 * [IAW](README.md)
 
+## Práctica 15
+
+* [Práctica 15 - Wordpress con docker compose](practica-15/practica-15-wordpress-con-docker-compose.md)
+
 ## Práctica 12
 
 * [Práctica 12 - Wordpress con Bitnami](practica-12/practica-12-wordpress-con-bitnami.md)
