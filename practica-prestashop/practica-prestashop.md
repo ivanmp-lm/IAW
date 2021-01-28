@@ -6,6 +6,16 @@ description: >-
 
 # Práctica Prestashop
 
+**DATOS DE LA MÁQUINA PARA SU REVISIÓN:**
+
+* **IP:** [**http://54.234.127.140/**](http://54.234.127.140/)\*\*\*\*
+* **USUARIO PRESTASHOP:** admin@admin.com
+* **CLAVE PRESTASHOP:** adminpassword
+* **ACCESO PHPMYADMIN:** [**http://54.234.127.140:8080/**](http://54.234.127.140:8080/)\*\*\*\*
+* **SERVIDOR MYSQL:** mysql
+* **USUARIO PHPMYADMIN:** pst\_user
+* **CLAVE PHPMYADMIN:** pst\_password
+
 Esta práctica es muy parecida a la anterior, pero se sustituirá el CMS wordpress por prestashop que está pensado para lanzar una tienda online. Igual que la anterior, se usará docker y docker-compose por lo que el primer paso será instalar ambas aplicaciones:
 
 ```text
@@ -89,5 +99,41 @@ DB_USER=pst_user
 DB_PASSWORD=pst_password
 ```
 
+Estando en la misma carpeta que estos dos archivos, se ejecutará docker-compose:
 
+```text
+$ sudo docker-compose up -d
+```
+
+Y se probará a acceder a la IP pública de la máquina donde debería saltar la instalación de prestashop:
+
+![](../.gitbook/assets/image%20%2828%29.png)
+
+Esto indica que el servidor apache con prestashop está funcionando correctamente. Se instalará para comprobar que también funciona la base de datos.
+
+Antes de esto, y ya que se ha creado un usuario específico para prestashop en mysql, se accederá al docker de mysql con el siguiente comando:
+
+```text
+$ sudo docker exec -it IDDOCKER /bin/bash
+```
+
+Donde "IDDOCKER" serán los dos primeros caracteres de la ID del contenedor \(obtenida con el comando "sudo docker ps"\). Dentro del contenedor mysql se accederá a la base de datos y se le darán privilegios al usuario con los siguientes comandos:
+
+```text
+$ mysql -u root -p
+mysql> GRANT ALL PRIVILEGES ON prestashop.* TO 'pst_user'.'%';
+mysql> FLUSH PRIVILEGES;
+```
+
+Acto seguido, en el penúltimo paso de la instalación de prestashop se introducirá la siguiente información:
+
+![](../.gitbook/assets/image%20%2823%29.png)
+
+Tras la instalación se accederá dentro del contenedor docker de prestashop de la misma forma que se ha hecho anteriormente con mysql y se eliminará la carpeta "install" por motivos de seguridad. Tras esto, prestashop estará instalado:
+
+![](../.gitbook/assets/image%20%2825%29.png)
+
+Para iniciar sesión se utilizará el correo electrónico y contraseña especificados al inicio del documento. Para finalizar la práctica, se comprobará también que phpMyAdmin funciona correctamente:
+
+![](../.gitbook/assets/image%20%2830%29.png)
 
