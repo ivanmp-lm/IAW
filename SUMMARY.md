@@ -2,6 +2,10 @@
 
 * [IAW](README.md)
 
+## Práctica Prestashop
+
+* [Práctica Prestashop](practica-prestashop/practica-prestashop.md)
+
 ## Práctica 15
 
 * [Práctica 15 - Wordpress con docker compose](practica-15/practica-15-wordpress-con-docker-compose.md)
