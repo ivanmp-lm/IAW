@@ -2,6 +2,10 @@
 
 * [IAW](README.md)
 
+## PRÁCTICA 16
+
+* [Práctica 16 - «Dockerizar» una aplicación LAMP](practica-16/practica-16.md)
+
 ## Práctica Prestashop
 
 * [Práctica Prestashop](practica-prestashop/practica-prestashop.md)
