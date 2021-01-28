@@ -6,6 +6,15 @@ description: >-
 
 # Práctica 16 - «Dockerizar» una aplicación LAMP
 
+
+
+**DATOS DE LA MÁQUINA PARA SU REVISIÓN:**
+
+* **IP:** [**http://54.80.221.164/index.php**](http://54.80.221.164/index.php)\*\*\*\*
+* **ACCESO PHPMYADMIN:** [**http://54.80.221.164:8080/**](http://54.80.221.164:8080/)\*\*\*\*
+* **USUARIO PHPMYADMIN:** root
+* **CLAVE PHPMYADMIN:** root
+
 Esta práctica empieza igual que las dos anteriores, pero con la peculiaridad de que se utilizará docker-compose combinado con dockerfile para crear nuestro propio contenedor en el que se lanzará una aplicación de Apache conectada a una pila LAMP.
 
 El primer paso será crear el archivo dockerfile ya que el nuevo archivo de docker-compose se servirá de él posteriormente. El resultado del archivo es el siguiente:
@@ -111,4 +120,34 @@ Con estos componentes, se lanzarán los contenedores con el comando de siempre:
 ```text
 $ sudo docker-compose up -d
 ```
+
+Tras esto, debería ser posible acceder a la aplicación LAMP utilizando la IP pública del contenedor:
+
+![](../.gitbook/assets/image%20%2823%29.png)
+
+No obstante, no se podrán inscribir datos aún, se deberá acceder a phpMyAdmin por el puerto 8080 y ejecutar el siguiente script \(utilizado también en las primeras prácticas\):
+
+```text
+DROP DATABASE IF EXISTS lamp_db;
+CREATE DATABASE lamp_db CHARSET utf8mb4;
+USE lamp_db;
+
+CREATE TABLE users (
+  id int(11) NOT NULL auto_increment,
+  name varchar(100) NOT NULL,
+  age int(3) NOT NULL,
+  email varchar(100) NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE USER IF NOT EXISTS 'lamp_user'@'%';
+SET PASSWORD FOR 'lamp_user'@'%' = 'lamp_password';
+GRANT ALL PRIVILEGES ON lamp_db.* TO 'lamp_user'@'%';
+```
+
+![](../.gitbook/assets/image%20%2824%29.png)
+
+Tras ejecutar el script, se podrá agregar información a la aplicación y se dará por concluida la práctica:
+
+![](../.gitbook/assets/image%20%2833%29.png)
 

@@ -107,7 +107,7 @@ $ sudo docker-compose up -d
 
 Y se probará a acceder a la IP pública de la máquina donde debería saltar la instalación de prestashop:
 
-![](../.gitbook/assets/image%20%2828%29.png)
+![](../.gitbook/assets/image%20%2830%29.png)
 
 Esto indica que el servidor apache con prestashop está funcionando correctamente. Se instalará para comprobar que también funciona la base de datos.
 
@@ -127,13 +127,13 @@ mysql> FLUSH PRIVILEGES;
 
 Acto seguido, en el penúltimo paso de la instalación de prestashop se introducirá la siguiente información:
 
-![](../.gitbook/assets/image%20%2823%29.png)
+![](../.gitbook/assets/image%20%2825%29.png)
 
 Tras la instalación se accederá dentro del contenedor docker de prestashop de la misma forma que se ha hecho anteriormente con mysql y se eliminará la carpeta "install" por motivos de seguridad. Tras esto, prestashop estará instalado:
 
-![](../.gitbook/assets/image%20%2825%29.png)
+![](../.gitbook/assets/image%20%2827%29.png)
 
 Para iniciar sesión se utilizará el correo electrónico y contraseña especificados al inicio del documento. Para finalizar la práctica, se comprobará también que phpMyAdmin funciona correctamente:
 
-![](../.gitbook/assets/image%20%2830%29.png)
+![](../.gitbook/assets/image%20%2832%29.png)
 
