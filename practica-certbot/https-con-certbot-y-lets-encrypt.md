@@ -6,7 +6,7 @@ description: >-
 
 # HTTPS Con Certbot y Let's Encrypt
 
-Se utilizará el script de la práctica de WP-CLI para realizar esta \(también se alojará una copia en este repositorio\).
+Se utilizará el script de la práctica de WP-CLI para realizar esta \(también se alojará una copia en este repositorio incluyendo los cambios aquí descritos\).
 
 Con la máquina lanzada y la página de Wordpress operativa, habrá que registrarse en la página Freenom para registrar un nombre de dominio gratuito. Habrá que editar la dirección y la ciudad en el área de cliente ya que si no, no se podrá adquirir un dominio. 
 
