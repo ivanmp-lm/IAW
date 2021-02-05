@@ -20,5 +20,20 @@ En la pestaña "Manage Freenom DNS" se añadirán dos registros con la ip públi
 
 Una vez hecho esto se procederá a configurar la herramienta [Certbot](https://certbot.eff.org/), que sirve para instalar certificados SSL expedidos por la autoridad certificadora [Let's Encrypt](https://letsencrypt.org/).
 
+Se ejecutarán los siguientes comandos para instalar la herramienta:
 
+```text
+#Instalar y actualizar la herramienta de instalación de paquetes snap
+sudo snap install core; sudo snap refresh core
+#Eliminar instalaciones previas de Certbot
+sudo apt-get remove certbot
+#Instalar Certbot
+sudo snap install --classic certbot
+#Crear alias para el comando "certbot"
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+#Obtener certificado y configurarlo en Apache
+sudo certbot --apache -m ivan@ivan.com --agree-tos --no-eff-email -d practicacertbotivan.tk
+```
+
+Donde en el último comando habrá que adaptar los parámetros a lo que se requiera \(email y dominio\).
 
