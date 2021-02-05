@@ -18,3 +18,7 @@ En la pestaña "Manage Freenom DNS" se añadirán dos registros con la ip públi
 
 ![](../.gitbook/assets/image%20%2834%29.png)
 
+Una vez hecho esto se procederá a configurar la herramienta [Certbot](https://certbot.eff.org/), que sirve para instalar certificados SSL expedidos por la autoridad certificadora [Let's Encrypt](https://letsencrypt.org/).
+
+
+
