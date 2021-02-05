@@ -8,13 +8,13 @@ description: >-
 
 Se utilizará el script de la práctica de WP-CLI para realizar esta \(también se alojará una copia en este repositorio incluyendo los cambios aquí descritos\).
 
-Con la máquina lanzada y la página de Wordpress operativa, habrá que registrarse en la página Freenom para registrar un nombre de dominio gratuito. Habrá que editar la dirección y la ciudad en el área de cliente ya que si no, no se podrá adquirir un dominio. 
+Con la máquina lanzada y la página de Wordpress operativa, habrá que registrarse en la página [Freenom ](https://www.freenom.com/es/index.html?lang=es)para registrar un nombre de dominio gratuito. Habrá que editar la dirección y la ciudad en el área de cliente ya que si no, no se podrá adquirir un dominio. 
 
-Tras esto y con el dominio registrado \(services -&gt; register a new domain\) se accederá a "Services -&gt; My Domains" y se pulsará en "Manage Domain":
+Tras esto y con el dominio registrado \(services -&gt; register a new domain\) se accederá a "**Services -&gt; My Domains**" y se pulsará en "**Manage Domain**":
 
 ![](../.gitbook/assets/image%20%2837%29.png)
 
-En la pestaña "Manage Freenom DNS" se añadirán dos registros con la ip pública de la máquina de Amazon para darle al servidor DNS la información necesaria:
+En la pestaña "**Manage Freenom DNS**" se añadirán dos registros con la ip pública de la máquina de Amazon para darle al servidor DNS la información necesaria:
 
 ![](../.gitbook/assets/image%20%2836%29.png)
 
@@ -37,7 +37,7 @@ sudo certbot --apache -m ivan@ivan.com --agree-tos --no-eff-email -d practicacer
 
 Donde en el último comando habrá que adaptar los parámetros a lo que se requiera \(email y dominio\).
 
-Como última configuración también sería necesario ingresar en phpMyAdmin y cambiar la tabla "wp\_options" de la base de datos de Wordpress para adecuar la nueva URL de la página:
+Como última configuración también sería necesario ingresar en phpMyAdmin y cambiar la tabla "**wp\_options**" de la base de datos de Wordpress para adecuar la nueva URL de la página:
 
 ![](../.gitbook/assets/image%20%2835%29.png)
 
