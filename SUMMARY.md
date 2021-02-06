@@ -2,6 +2,10 @@
 
 * [IAW](README.md)
 
+## Práctica 17
+
+* [Balanceo de carga con HAProxy](practica-17/balanceo-de-carga-con-haproxy.md)
+
 ## PRACTICA HTTPS COMPOSE
 
 * [HTTPS con Docker Compose](practica-https-compose/https-con-docker-compose.md)
