@@ -20,6 +20,9 @@ Para empezar la práctica, se partirá de los archivos realizados para la práct
       - apache
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - backend-network
+      - frontend-network
 ```
 
 Este bloque indica que la imagen de HAProxy se ejecutará bajo los puertos 80 \(servicio a balancear\) y 1936 \(el puerto que se usará para acceder a la página de estadísticas del balanceador\). Hay que tener en cuenta que se debe abrir este nuevo puerto de forma manual en la máquina de Amazon.
