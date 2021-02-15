@@ -115,7 +115,7 @@ En este momento se deberían recoger los datos con un sensor, pero como en mi ca
 
 ```text
 $ sudo docker run --init -it --rm efrecon/mqtt-client sub -h IP -t "iescelia/#"
-$ docker run --init -it --rm efrecon/mqtt-client pub -h IP -p 1883 -t "iescelia/aula22/co2" -m DATO
+$ sudo docker run --init -it --rm efrecon/mqtt-client pub -h IP -p 1883 -t "iescelia/aula22/co2" -m DATO
 ```
 
 El primer comando tiene un parámetro que deberá ser cambiado antes de ejecutarse \(-h\) sustituyendo la palabra "IP" por la IP pública o nombre DNS del servidor, una vez ejecutado se quedará a la escucha y ese terminal deberá dejarse abierto.
