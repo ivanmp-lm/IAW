@@ -2,6 +2,10 @@
 
 * [IAW](README.md)
 
+## Practica-18
+
+* [Práctica 18 - IoTT Dashboard](practica-18/practica-18-iott-dashboard.md)
+
 ## Práctica 17
 
 * [Balanceo de carga con HAProxy](practica-17/balanceo-de-carga-con-haproxy.md)
