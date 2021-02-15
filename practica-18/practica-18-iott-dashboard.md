@@ -10,6 +10,12 @@ description: >-
 
 {% embed url="https://github.com/josejuansanchez/co2-celia" %}
 
+Datos de acceso:
+
+* Grafana: [http://3.238.26.95:3000/](http://3.238.26.95:3000/)
+* Usuario: admin
+* Clave: admin
+
 Se creará una máquina en Amazon Web Services cuyo propósito será almacenar gráficas con los datos atmosféricos \(en concreto los niveles de CO2\) del aula número 22 del IES Celia Viñas.
 
 Se implementarán los cuatro servicios utilizando Docker Compose. El archivo utilizado para ello contiene lo siguiente:
@@ -98,7 +104,7 @@ $ sudo docker-compose up -d
 
 Y se accederá a la ip pública de la máquina junto con el puerto de Grafana \(3000\):
 
-![](../.gitbook/assets/image%20%2846%29.png)
+![](../.gitbook/assets/image%20%2847%29.png)
 
 Para acceder al panel de control se utilizarán los siguientes datos de acceso:
 
@@ -124,5 +130,5 @@ Con el segundo comando se hará exactamente lo mismo, y después del parámetro 
 
 Debería quedar algo así tras introducir varios datos:
 
-
+![](../.gitbook/assets/image%20%2846%29.png)
 
