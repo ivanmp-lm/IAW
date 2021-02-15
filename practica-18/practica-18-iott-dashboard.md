@@ -90,5 +90,39 @@ INFLUXDB_PASSWORD=root
 
 Simplemente se indicará el nombre de la base de datos en InfluxDB que será "iescelia\_db" junto con sus credenciales en caso de necesitar conectarse a la misma.
 
+Se ejecutará el archivo compose con el comando de siempre:
+
+```text
+$ sudo docker-compose up -d
+```
+
+Y se accederá a la ip pública de la máquina junto con el puerto de Grafana \(3000\):
+
+![](../.gitbook/assets/image%20%2846%29.png)
+
+Para acceder al panel de control se utilizarán los siguientes datos de acceso:
+
+* USER: Admin
+* CLAVE: Admin
+
+Al iniciar sesión por primera vez, Grafana pedirá cambiar la contraseña por defecto, en mi caso seguirá igual. En la vista principal, se pulsará en el icono de los cuatro cuadrados \(Dashboards\) y en "Manage":
+
+![](../.gitbook/assets/image%20%2845%29.png)
+
+Este será el dashboard creado junto con el contenedor de Docker, sus datos salen de un archivo ".json" incluido en el repositorio y referenciado en el archivo Compose para montarlo en la carpeta correspondiente de Grafana. Se seleccionará y nos mostrará dos gráficos que aparecen vacíos.
+
+En este momento se deberían recoger los datos con un sensor, pero como en mi caso no dispongo del mismo, se utilizará Mosquitto para enviar datos inventados a Grafana y testear el funcionamiento. Se necesitarán dos comandos para hacer esto:
+
+```text
+$ sudo docker run --init -it --rm efrecon/mqtt-client sub -h IP -t "iescelia/#"
+$ docker run --init -it --rm efrecon/mqtt-client pub -h IP -p 1883 -t "iescelia/aula22/co2" -m DATO
+```
+
+El primer comando tiene un parámetro que deberá ser cambiado antes de ejecutarse \(-h\) sustituyendo la palabra "IP" por la IP pública o nombre DNS del servidor, una vez ejecutado se quedará a la escucha y ese terminal deberá dejarse abierto.
+
+Con el segundo comando se hará exactamente lo mismo, y después del parámetro "-m" se introducirá un dato. Si el terminal de escucha sigue abierto, el dato se grabará dentro de Grafana, en concreto dentro de la gráfica bajo el nombre "Aula 22 - CO2". Si se desea introducir valores en la segunda gráfica, se cambiará la línea "iescelia/aula22/co2" a "iescelia/aula22/tvoc".
+
+Debería quedar algo así tras introducir varios datos:
+
 
 
