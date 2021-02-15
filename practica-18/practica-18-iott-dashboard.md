@@ -88,7 +88,7 @@ INFLUXDB_USERNAME=root
 INFLUXDB_PASSWORD=root
 ```
 
-Simplemente se indicará el nombre de la base de datos en Influx_DB que será_ "iescelia\_db" junto con sus credenciales en caso de necesitar conectarse a la misma.
+Simplemente se indicará el nombre de la base de datos en InfluxDB que será "iescelia\_db" junto con sus credenciales en caso de necesitar conectarse a la misma.
 
 
 
