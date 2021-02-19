@@ -10,7 +10,7 @@ Se creará una máquina virtual de forma local en VirtualBox para esta práctica
 
 Lo primero que se hará en la misma será crear una estructura de carpetas específica para el uso de MKDocs, el resultado sería algo así:
 
-![](../.gitbook/assets/image%20%2853%29.png)
+![](../.gitbook/assets/image%20%2854%29.png)
 
 El archivo "mkdocs.yml" es similar al archivo de configuración de Jekyll, en su interior también escribiremos los parámetros necesarios para el funcionamiento y orden de la página:
 
@@ -34,5 +34,15 @@ $ sudo docker run --rm -it -p 8000:8000 -v "$PWD":/docs squidfunk/mkdocs-materia
 
 La carpeta "docs" será enlazada como un volumen en la carpeta del contenedor relativa al tema de MKDocs. Sólo se podrá acceder de forma local a la página web:
 
+![](../.gitbook/assets/image%20%2853%29.png)
 
+Tras configurar los archivos Markdown para incluir la información que se desee se lanzarán los siguientes comandos:
+
+```text
+$ git init
+$ git remote add origin "URL_REPOSITORIO"
+$ sudo docker run --rm -it -v ~/.ssh:/root/.ssh -v "$PWD":/docs squidfunk/mkdocs-material gh-deploy
+```
+
+Tras inicializar el repositorio de GitHub en la carpeta proyecto y referenciar el repositorio objetivo, se lanzará ese último comando con docker para ejecutar el comando "gh-deploy". Se nos pedirá usuario y contraseña de GitHub y tras logearse exitosamente, todo el contenido será enviado al repositorio en cuestión y la página quedará publicada automáticamente.
 
