@@ -78,3 +78,7 @@
 
 * [Práctica Jekyll](practica-jekyll/practica-jekyll.md)
 
+## Práctica MKDocs
+
+* [Práctica MKDocs](practica-mkdocs/practica-mkdocs.md)
+
