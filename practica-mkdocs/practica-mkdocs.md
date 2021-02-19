@@ -10,7 +10,7 @@ Se creará una máquina virtual de forma local en VirtualBox para esta práctica
 
 Lo primero que se hará en la misma será crear una estructura de carpetas específica para el uso de MKDocs, el resultado sería algo así:
 
-![](../.gitbook/assets/image%20%2854%29.png)
+![](https://i.ibb.co/nk2tLgf/image-54.png)
 
 El archivo "mkdocs.yml" es similar al archivo de configuración de Jekyll, en su interior también escribiremos los parámetros necesarios para el funcionamiento y orden de la página:
 
@@ -34,7 +34,7 @@ $ sudo docker run --rm -it -p 8000:8000 -v "$PWD":/docs squidfunk/mkdocs-materia
 
 La carpeta "docs" será enlazada como un volumen en la carpeta del contenedor relativa al tema de MKDocs. Sólo se podrá acceder de forma local a la página web:
 
-![](../.gitbook/assets/image%20%2853%29.png)
+![](https://i.ibb.co/3vR2W3W/image-53.png)
 
 Tras configurar los archivos Markdown para incluir la información que se desee se lanzarán los siguientes comandos:
 
