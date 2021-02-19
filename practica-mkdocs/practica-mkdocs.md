@@ -6,7 +6,7 @@ description: >-
 
 # Práctica MKDocs
 
-Se creará una máquina de Ubuntu Server 20.04 en AWS para la realización de la práctica. 
+Se creará una máquina virtual de forma local en VirtualBox para esta práctica.
 
 Lo primero que se hará en la misma será crear una estructura de carpetas específica para el uso de MKDocs, el resultado sería algo así:
 
@@ -18,7 +18,7 @@ El archivo "mkdocs.yml" es similar al archivo de configuración de Jekyll, en su
 site_name: Iván MKDocs
 
 nav:
-    - Principal: index.md
+    - Principal: home.md
     - Acerca de: about.md
 
 theme: material
@@ -32,7 +32,7 @@ Para comenzar a probar la página, se ejecutará el siguiente comando partiendo 
 $ sudo docker run --rm -it -p 8000:8000 -v "$PWD":/docs squidfunk/mkdocs-material
 ```
 
-La carpeta "docs" será enlazada como un volumen en la carpeta del contenedor relativa al tema de MKDocs. Al acceder por la IP pública de la máquina utilizando el puerto 8000 aparecerá el contenido hasta ahora creado:
+La carpeta "docs" será enlazada como un volumen en la carpeta del contenedor relativa al tema de MKDocs. Sólo se podrá acceder de forma local a la página web:
 
 
 
